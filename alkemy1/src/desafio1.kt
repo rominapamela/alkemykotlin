@@ -130,15 +130,15 @@ data class Parking(val vehicles: MutableSet<Vehicle>)
     var total=0
     var quantity: Pair<Int, Int> = Pair(cantVehicle,total)
 
-    fun addVehicle(vehicle: Vehicle): Boolean
+    fun addVehicle(vehicle: Vehicle): String
     {
         if (maximo<20) {
             vehicles.add(vehicle)
             maximo = maximo + 1
-            return true
+            return "Welcome to AlkeParking"
         }
         else{
-            return false
+            return "Sorry, the check'-in failed"
         }
     }
 
